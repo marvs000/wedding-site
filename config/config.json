@@ -1,0 +1,35 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "wedding-site-db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "useUTC": false
+    },
+    "timezone": "+08:00"
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "wedding-site-db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "useUTC": false
+    },
+    "timezone": "+08:00"
+  },
+  "production": {
+    "username": "db-lcm-backend",
+    "password": "zy06vNHiog)3",
+    "database": "wedding-site-db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "useUTC": false
+    },
+    "timezone": "+08:00"
+  }
+}
