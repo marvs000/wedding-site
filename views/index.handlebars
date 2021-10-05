@@ -286,17 +286,12 @@
                     </p>
                 </div>
                 <div class="col-md-10 mx-auto col-lg-6">
-                    <form method="POST" action="#rsvp-section" class="p-4 p-md-12 border rounded-3 bg-light" _lpchecked="1" style="font-family: Josefin Sans;">
-                        <!-- <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Example: John Doe">
-                            <label for="floatingInput">Complete Name:</label>
-                        </div> -->
+                    <form method="POST" id="rsvpForm" action="/send-rsvp" class="p-4 p-md-12 border rounded-3 bg-light" _lpchecked="1" style="font-family: Josefin Sans;">
                         <div class="form-floating">
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <input class="form-control" name="complete_name" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." required>
                             <datalist id="datalistOptions">
                                 {{#each attendees}}
                                     <option value="{{lastname}}, {{firstname}} {{mi}}.">
-
                                     {{else}}
                                 {{/each}}
                             </datalist>
@@ -305,16 +300,16 @@
                         <label style="margin-top: 1em;" for="exampleFormControlInput1" class="form-label">Confirmation:</label>
                         <div class="form-floating mb-3">
                             <div class="form-check form-check-inline">
-                                <input class="hand-pointer form-check-input" type="radio" name="yesRadio" id="inlineRadio1" value="option1">
+                                <input class="hand-pointer form-check-input" type="radio" name="confirmed" id="inlineRadio1" value="yes" checked>
                                 <label class="hand-pointer form-check-label" for="inlineRadio1">I confirm! 😍</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="hand-pointer form-check-input" type="radio" name="noRadio" id="inlineRadio2" value="option2">
+                                <input class="hand-pointer form-check-input" type="radio" name="confirmed" id="inlineRadio2" value="no">
                                 <label class="hand-pointer form-check-label" for="inlineRadio2">Sorry I can't come 😥</label>
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" style="height: 200px" placeholder="Suggestions" id="floatingTextarea"></textarea>
+                            <textarea class="form-control" style="height: 200px" name="suggestions" placeholder="Suggestions" id="floatingTextarea" required></textarea>
                             <label for="floatingInput">Suggestions/Ideas on how we can do our dates:</label>
                         </div>
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
@@ -338,3 +333,51 @@
     <!-- End Footer Section -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="/js/sweetalert2.all.min.js"></script>
+    <script>
+        $( '#rsvpForm' ).on( 'submit', function(e) {
+            e.preventDefault(); 
+
+            var body = $(this).serializeArray();
+
+            var data = {};
+            $(body).each(function(index, obj){
+                data[obj.name] = obj.value;
+            });
+
+            console.log(JSON.stringify(data))
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, send it!',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: "POST",
+                        url: '/send-rsvp',
+                        data: data,
+                        success: function(res) {
+                            Swal.fire(
+                                'Success!',
+                                res.message,
+                                'success'
+                            )
+                        },
+                        error: function(er) {
+                            Swal.fire(
+                                'Oh no!',
+                                er.responseJSON.message,
+                                'error'
+                            )
+                        }
+                    }); 
+                }
+            })
+        });
+    </script>

@@ -4,6 +4,7 @@ const app = express();
 const db = require('./config/connection');
 const path = require('path');
 const favicon = require('serve-favicon')
+const bodyParser = require('body-parser');
 
 // Favicon
 app.use(favicon(path.join(__dirname,'public','img','favicon.ico')));
@@ -11,6 +12,9 @@ app.use(favicon(path.join(__dirname,'public','img','favicon.ico')));
 // Handlebars
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+// Body Parser
+app.use(express.urlencoded({ extended: false }));
 
 // Parse JSON bodies for this app
 app.use(express.json());
