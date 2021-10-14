@@ -5,7 +5,9 @@ const Rsvp = require('../models/Rsvp');
 const Sequelize = require('../config/connection');
 
 router.get('/', (req, res) => {
-    Attendees.findAll().then(attendees => {
+    Attendees.findAll({
+        order:[[ 'lastname', 'ASC' ]]
+    }).then(attendees => {
         res.render('index', { attendees: JSON.parse(JSON.stringify(attendees)) })
     }).catch(err => res.send({ error: err.message }))
 });
