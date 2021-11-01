@@ -101,6 +101,19 @@ body, html {
   .ent-title {
     font-size: 1rem;
   }
+
+  #mainHeroText {
+    font-size: 1.25rem;
+  }
+  
+  #subHeroText {
+    font-size: 0.6rem;
+  }
+
+  #moreDetailsBtn, #rsvpBtn {
+    font-size: 11px;
+    padding: 0.5rem 0.4rem;
+  }
 }
 
 @media (min-width: 576px) {
@@ -110,6 +123,19 @@ body, html {
   .ent-title {
     font-size: 1.1rem;
   }
+
+  #mainHeroText {
+    font-size: 1.95rem;
+  }
+  
+  #subHeroText {
+    font-size: 0.9rem;
+  }
+
+  #moreDetailsBtn, #rsvpBtn {
+    font-size: 13px;
+    padding: 0.5rem 1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -118,6 +144,18 @@ body, html {
   }
   .ent-title {
     font-size: 1.3rem;
+  }
+  #mainHeroText {
+    font-size: 2.5rem;
+  }
+  
+  #subHeroText {
+    font-size: 1.25rem;
+  }
+
+  #moreDetailsBtn, #rsvpBtn {
+    padding: .5rem 3rem;
+    font-size: 1.25rem;
   }
 }
 
