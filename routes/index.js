@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 
 router.post('/send-rsvp', async (req, res) => {
     let { complete_name, confirmed, suggestions } = req.body;
+    console.log('req.body', req.body)
 
     const attendees_find = await Attendees.findAll({
         where: Sequelize.where(
@@ -46,8 +47,15 @@ router.post('/send-rsvp', async (req, res) => {
                     // Delete all companion of a guest
                     await Companion.destroy({ where: { parent_id: attendees_info[0].id } });
 
+                    let compArr = typeof (req.body['companion[]']);
+                    if ((typeof (req.body['companion[]'])) === 'string' ) {
+                        compArr = [ req.body['companion[]'] ]
+                    } else {
+                        compArr = req.body['companion[]'];
+                    }
+
                     // Add all companion of guest based on input
-                    await Promise.all(req.body['companion[]'].map(async comp => {
+                    await Promise.all(compArr.map(async comp => {
                         await Companion.create({ parent_id: attendees_info[0].id, complete_name: comp });
                     }));
                 } else {
