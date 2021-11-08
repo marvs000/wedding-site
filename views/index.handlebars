@@ -393,7 +393,12 @@
                             let companion_count = res.data.companion;
                             let inputs_companion = "";
                             for (let i = 0; i < companion_count; i++) {
-                                inputs_companion += `<input id="inputs_companion${i+1}" class="swal2-input">`
+                                inputs_companion += `
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="inputs_companion${i+1}" placeholder="Enter name of companion: ">
+                                        <label for="inputs_companion${i+1}">Enter name of companion: #${i+1}</label>
+                                    </div>
+                                `
                             }
                             const { value: formValues } = Swal.fire({
                                 title: `Yey! We have also reserved additional ${companion_count} seat(s) for you!`,
@@ -405,7 +410,10 @@
                                 preConfirm: () => {
                                     let input_companion_values = [];
                                     for (let j = 0; j < companion_count; j++) {
-                                        input_companion_values.push(document.getElementById(`inputs_companion${j+1}`).value)
+                                        let v = document.getElementById(`inputs_companion${j+1}`).value;
+                                        if (v !== "") {
+                                            input_companion_values.push(v)
+                                        }
                                     }
                                     return input_companion_values;
                                 }
