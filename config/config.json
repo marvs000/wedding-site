@@ -11,10 +11,10 @@
     "timezone": "+08:00"
   },
   "test": {
-    "username": "bbf82b96f9ab30",
-    "password": "76929bfe",
+    "username": "k3cmaazv9x8m9yia",
+    "password": "rtrof8d8q2uegdq3",
     "database": "heroku_309a1912abc29fb",
-    "host": "us-cdbr-east-04.cleardb.com",
+    "host": "eanl4i1omny740jw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "dialectOptions": {
       "useUTC": false
@@ -22,10 +22,10 @@
     "timezone": "+08:00"
   },
   "production": {
-    "username": "bbf82b96f9ab30",
-    "password": "76929bfe",
+    "username": "k3cmaazv9x8m9yia",
+    "password": "rtrof8d8q2uegdq3",
     "database": "heroku_309a1912abc29fb",
-    "host": "us-cdbr-east-04.cleardb.com",
+    "host": "eanl4i1omny740jw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "dialectOptions": {
       "useUTC": false
