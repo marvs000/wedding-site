@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'eyesome-script';
+    src: url('eyesome_script-webfont.woff2') format('woff2'),
+         url('eyesome_script-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eyesome-regular';
+    src: url('eyesome_italic-webfont.woff2') format('woff2'),
+         url('eyesome_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eyesome-regular';
+    src: url('eyesome_regular-webfont.woff2') format('woff2'),
+         url('eyesome_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,181 +1,124 @@
-    <!-- Back to top button -->
-    <button
-        type="button"
-        class="btn btn-danger btn-floating btn-lg"
-        id="btn-back-to-top"
-        title="Back to top"
-        style="z-index: 1;"
-
-    >
-        <i class="fas fa-angle-up"></i>
-    </button>    
-    <!-- Start Navbar -->
-    <nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light" style="z-index: 1024;">
-        <div class="container-fluid container-md">
-            <a class="navbar-brand float-start" href="#">
-                <h1 style="font-family: 'Allura', cursive; margin: 0;">
-                    Eric <span style="color: #a18f5d; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">&</span> Cristel
-                </h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse float-end" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#entourage-section">ENTOURAGE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#attire-section">ATTIRE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery-section">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#location-section">LOCATION</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rsvp-section">RSVP</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- End Navbar -->
+    
     
     <!-- Start hero Section -->
-    <div class="hero-image">
+    <section class="hero-image">
         <div class="hero-text">
-            <h1 id="mainHeroText">Welcome to our Official Wedding Website</h1>
+            <h1 id="mainHeroText">Isn't she lovely</h1>
             <p id="subHeroText">
-                We joyfully invite you to join in the celebration of our wedding
-                on the 30<sup>th</sup> day of November 2021 
-                | 2:00 in the afternoon
+                isn't she
             </p>
-            <a href="#entourage-section" class="btn btn-default btn-lg" id="moreDetailsBtn">More Details</a>
-            <a class="btn btn-default btn-lg" id="rsvpBtn" href="#rsvp-section">RSVP</a>
+            <h1 id="peach"><img src="/img/peach-icon.png" alt="Peach">NE</h1>
+            <h1 id="subHeroText2">derful</h1>
+            {{!-- <a href="#entourage-section" class="btn btn-default btn-lg" id="moreDetailsBtn">More Details</a>
+            <a class="btn btn-default btn-lg" id="rsvpBtn" href="#rsvp-section">RSVP</a> --}}
         </div>
-    </div>
+    </section>
     <!-- End Hero Section -->
+
+    <section class="banner">
+        <div class="celeb-banner"><h1>It's a Triple Celebration!</h1></div>
+
+        <div class="triple-celeb-container">
+            <div class="triple-celeb">
+                <div class="dedication">
+                    <div>
+                        <img src="/img/dedication.png" alt="Dedication">
+                    </div>
+                    <p>Dedication</p>
+                </div>
+                <div class="turning-one">
+                    <div>
+                        <img src="/img/turning-one.png" alt="Dedication">
+                    </div>
+                    <p>is Turning One</p>
+                </div>
+                <div class="thirty-one">
+                    <div>
+                        <img src="/img/thirty-one.png" alt="is Turning Thirty-One">
+                    </div>
+                    <p>is Turning Thirty-One</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{!-- <section class="schedule">
+
+    </section> --}}
 
     <!-- Start Entourage Section -->
     <section class="wedding-party" id="entourage-section" style="padding-bottom: 20px;">
-        <h1 class="entourage-title">
+        {{!-- <h1 class="entourage-title">
             <span class="date-text__inner">The Entourage</span>
-        </h1>
+        </h1> --}}
         
-        <div class="entourage-participants">
-            <div>
-                <div class="ent-title">Groom's Parents</div>
-                <div class="ent-desc">Mr. Ramil P. Baste Sr. (+)</div>
-                <div class="ent-desc">Mrs. Dolores E. Baste</div>
+
+        <div class="row ms-0 me-0">
+            <div class="col-lg-6 col-md-6">
+                <div class="row ms-0 me-0">
+                    <div class="entourage-title">Ninong</div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Lawrence Tagulao</div>
+                            <div class="ent-desc">Milbert Baste</div>
+                            <div class="ent-desc">John Paul Baste</div>
+                            <div class="ent-desc">John Edwar Ducusin</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Kennedy Mateo</div>
+                            <div class="ent-desc">Joseph Marinas</div>
+                            <div class="ent-desc">Jaye Kenneth Lim</div>
+                            <div class="ent-desc">Dexter Gregorio</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Francis Fangonilo</div>
+                            <div class="ent-desc">Kim John Selga</div>
+                            <div class="ent-desc">Neil Selga</div>
+                            <div class="ent-desc">John Paul Yuzon</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="" id="bride">
-                <div class="ent-title">Bride's Parents</div>
-                <div class="ent-desc">Mr. Ferdinand S. Selga</div>
-                <div class="ent-desc">Mrs. Luzviminda C. Selga</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants">
-            <div>
-                <div class="ent-title">Best Man</div>
-                <div class="ent-desc">Mr. Lawrence R. Tagulao</div>
-            </div>
-            <div class="" id="bride">
-                <div class="ent-title">Maid of Honor</div>
-                <div class="ent-desc">Ms. Maria Veronica A. Eslao</div>
-                <div class="ent-desc">Ms. Arianne Kate Panganiban</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants">
-            <div>
-                <div class="ent-title">Bridesmaids</div>
-                <div class="ent-desc">Ms. Joana Jaen C. Selga</div>
-                <div class="ent-desc">Ms. Cazandra Joy C. Selga</div>
-                <div class="ent-desc">Ms. Donnabel F. Barra</div>
-            </div>
-            <div class="" id="bride">
-                <div class="ent-title">Groomsmen</div>
-                <div class="ent-desc">Mr. Ramil E. Baste Jr.</div>
-                <div class="ent-desc">Mr. John Paul A. Yuson</div>
-                <div class="ent-desc">Mr. Aries S. Mataverde</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants">
-            <div>
-                <div class="ent-title">Ring Bearer</div>
-                <div class="ent-desc">Mr. Jaye Kenneth D. Lim</div>
-            </div>
-            <div class="" id="bride">
-                <div class="ent-title">Bible Bearer</div>
-                <div class="ent-desc">Mr. Richard D. Abitago Jr.</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants">
-            <div>
-                <div class="ent-title">Coin Bearer</div>
-                <div class="ent-desc">Mr. John Edwar E. Ducusin</div>
-            </div>
-            <div class="" id="bride">
-                <div class="ent-title">Essentials</div>
-                <div class="ent-desc">Mr. Joseph B. Mariñas</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants" style="margin-bottom: 0;">
-            <div>
-                <div class="ent-title" style="margin-bottom: 0">Flower Dudes</div>
-            </div>
-        </div>
-        <div class="entourage-participants" style="margin-top: 0.8rem;">
-            <div>
-                <div class="ent-desc">Mr. John Paul E. Baste</div>
-                <div class="ent-desc">Mr. Neil C. Selga</div>
-            </div>
-            <div>
-                <div class="ent-desc">Mr. Kim Jhon C. Selga</div>
-                <div class="ent-desc">Mr. Alex B. Menor</div>
-            </div>
-        </div>
-        
-        <div class="entourage-participants" style="margin-bottom: 0;">
-            <div>
-                <div class="ent-title" style="margin-bottom: 0">Primary Sponsors</div>
-            </div>
-        </div>
-        <div class="entourage-participants" style="margin-top: 0.8rem;">
-            <div>
-                <div class="ent-desc">Mr. Loreto Alcomendas</div>
-                <div class="ent-desc">Mr. William Dumangeng Jr.</div>
-                <div class="ent-desc">Mr. Ferdinand Fangonilo</div>
-                <div class="ent-desc">Mr. Alejio Calisin</div>
-                <div class="ent-desc">Mr. Eduardo Espiritu</div>
-                <div class="ent-desc">Mr. Ferdinand Reyes</div>
-                <div class="ent-desc">Mr. Elvin E. Casem</div>
-                <div class="ent-desc">Mr. MacLyndon R. Lao</div>
-            </div>
-            <div>
-                <div class="ent-desc">Mrs. Yvette M. Garcia</div>
-                <div class="ent-desc">Mrs. Mariedo Bello</div>
-                <div class="ent-desc">Mrs. Violeta Fangonilo</div>
-                <div class="ent-desc">Mrs. Antonia Calisin</div>
-                <div class="ent-desc">Mrs. Lany Espiritu</div>
-                <div class="ent-desc">Mrs. Precy Reyes</div>
-                <div class="ent-desc">Mrs. Christianne Lynnette Casem</div>
-                <div class="ent-desc">Mrs. Estrellita Macabagdal</div>
+            
+            <div class="col-lg-6 col-md-6">
+                <div class="row ms-0 me-0">
+                    <div class="entourage-title">Ninang</div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Grace Gadon</div>
+                            <div class="ent-desc">Rosemin Pasadilla</div>
+                            <div class="ent-desc">Mary Cris Epiritu</div>
+                            <div class="ent-desc">Nerissa Baste</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Donnabel Barra</div>
+                            <div class="ent-desc">Maria Veronica Eslao</div>
+                            <div class="ent-desc">Melvie San Diego</div>
+                            <div class="ent-desc">Arianne Kate Panganiban</div>
+                            <div class="ent-desc">Rochelle Abitago</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-4">
+                        <div>
+                            <div class="ent-desc">Cyndie Mae Lopez</div>
+                            <div class="ent-desc">Fredalyn Dulay</div>
+                            <div class="ent-desc">Germelyn Niduaza</div>
+                            <div class="ent-desc">Irish Faith Gadon</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="entourage-participants" style="margin-bottom: 0;">
+        <div class="entourage-participants mt-5 mb-0">
             <div>
-                <div class="ent-desc"><h2 style="font-family: Cardo; font-style: italic;">Rev. Lirio C. Agapay</h2></div>
+                <div class="ent-desc"><h2 style="font-family: gothambold;">Rev. Lirio C. Agapay</h2></div>
                 <div class="ent-title" style="font-size: 1rem;"><strong>Officiating Minister</strong></div>
             </div>
         </div>
@@ -183,29 +126,20 @@
     <!-- End Entourage Section -->
 
     <!-- Start Attire Section -->
-    <section class="attire" id="attire-section" style="background-color: rgba(235,234,232,1);">
+    <section class="attire" id="attire-section">
         <div class="container col-xxl-8 px-4 py-5" style="padding-top: 2rem!important; padding-bottom: 2rem!important;">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5" style="padding-top: 2rem!important; padding-bottom: 2rem!important;">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img id="attire-img" src="/img/10307.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              <div class="col-10 col-sm-8 col-lg-6 ms-auto me-auto">
+                <img id="attire-img" src="/img/white-outfit+jeans.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="250" loading="lazy">
               </div>
-              <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3" style="font-family: Cardo; font-style: italic;">Wedding Attire</h1>
+              <div class="col-lg-6 text-center mt-0">
+                <h1 class="display-5 fw-bold lh-1 mb-3 entourage-title">Event Attire</h1>
                 <p class="lead attire-sub-text">
-                    Please observe the following guidelines on the Official Wedding Attires:
-                    <h5>Ninong:</h5> <p>White Long Sleeves, Light Brown / Khaki Pants and Leather Shoes</p>
-                    <h5>Ninang:</h5> <p>Cream-colored Gown / Separate</p>
-                    <h5>All Other Guests (Semi-formal): </h5>
-                    <p>
-                        Light Khaki / Medium Champagne / White only <br>
-                        (Click this 
-                            <a style="text-decoration: none; font-weight: 600;" href="https://pin.it/4Dl9uFl" target="_blank" rel="noopener noreferrer">link</a>
-                            for the sample color.)
-                    </p>
-
-
-                    Please <b>AVOID</b> wearing
-                    <b>Jeans, T-Shirt, any other colors, dark colors, and flip-flops.</b>
+                    <h4>White Smart Casual</h4>
+                    <br>
+                    
+                    Please <b style="font-family: gothambold !important;">AVOID</b> wearing
+                    any other colors, dark colors, and flip-flops.
                 </p>
               </div>
             </div>
@@ -214,7 +148,7 @@
     <!-- End Attire Section -->
 
     <!-- Start Gallery Section -->
-    <section class="container" id="gallery-section">
+    {{!-- <section class="container" id="gallery-section">
         <h1 class="entourage-title" style="margin: 3rem 0 2rem;">
             <span class="date-text__inner">Gallery</span>
         </h1>
@@ -261,25 +195,25 @@
                 />
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End Gallery Section -->
 
     <!-- Start Location Section -->
     <section class="location" id="location-section" style="background-color: rgba(235,234,232,1);">
-        <div class="text-center" style="padding-top: 2rem!important; padding-bottom: 2rem!important;">
-            <h1 class="display-5 fw-bold"
-                style="font-family: 'Cardo'; font-weight: 300 !important; font-style: italic; color: #a18f5d;">Location</h1>
+        <div class="text-center ps-5 pe-5 pb-5">
+            <h1 class="display-5 fw-bold entourage-title">Location</h1>
             <div class="col-lg-8 mx-auto">
-            <p class="lead mb-4">
-                The wedding ceremony and reception will take place at <b style="font-weight: 600;">El Marfin Hotel and Pavilion</b>.
+            <p class="lead mb-4" style="font-family: gothambook !important;">
+                The wedding ceremony and reception will take place at <b style="font-weight: 600;">Corazon Events Place</b>.
                 <b style="font-weight: 600; display: block;">
                     Please refer to the map below or click this 
-                    <a href="https://g.page/ElMarfin" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">link</a> 
+                    <a href="https://goo.gl/maps/orL1pGff3stTap4M6" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">link</a> 
                     for more details on the directions.
                 </b>
             </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center ratio ratio-16x9">
-                <iframe style="border: solid 15px white" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.3236078826894!2d120.99582987900283!3d14.808724499825301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ae7ba721f8ff%3A0xd37ec2d6877a1c50!2sEl%20Marfin%20Hotel%20and%20Pavilion!5e0!3m2!1sen!2sph!4v1635605307137!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3857.7323684208486!2d121.07036587477045!3d14.78409898572428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397af83c5e005fd%3A0x6ec86bee3575569e!2sCorazon%20Events%20Place!5e0!3m2!1sen!2sph!4v1689997912336!5m2!1sen!2sph" style="border: solid 15px white" width="800" height="600" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                {{!-- <iframe style="border: solid 15px white" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.3236078826894!2d120.99582987900283!3d14.808724499825301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ae7ba721f8ff%3A0xd37ec2d6877a1c50!2sEl%20Marfin%20Hotel%20and%20Pavilion!5e0!3m2!1sen!2sph!4v1635605307137!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
             </div>
             </div>
         </div>
@@ -288,28 +222,13 @@
 
     <!-- Start RSVP Section -->
     <div style="background-color: rgba(40,47,61,1);" id="rsvp-section">
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-            <div class="row align-items-center g-lg-5 py-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h3 class="rsvp-text">RSVP</h3>
-                    <h1 class="display-4 fw-bold lh-1 mb-3 rsvp-sub-text">
-                        You are invited!
-                    </h1>
-                    <p class="col-lg-10 fs-5 rsvp-p">
-                        We are really excited to see you in the celebration of our love, as we exchange our marriage vows.
-                        But due to the limitation brought by the pandemic, we are limiting it to our very close family and friends.
-                        Please let us know if you can come. <strong>Kindly fill up the form for your confirmation.</strong>
-                    </p>
-                    <h1 class="display-4 fw-bold lh-1 mb-3 rsvp-sub-text">
-                        Gift Recommendation:
-                    </h1>
-                    <p class="col-lg-10 fs-5 rsvp-p">
-                        And lastly, we really want you to know that we have been truly blessed,
-                        especially with your presence and prayers. <strong>But if you desire to give nonetheless,
-                        monetary gift is the one we suggest 😊 </strong>
-                    </p>
-                </div>
-                <div class="col-md-10 mx-auto col-lg-6">
+        <div class="text-center ps-5 pe-5 pb-5">
+            <h1 class="display-5 fw-bold entourage-title">RSVP</h1>
+            <div class="col-lg-8 mx-auto">
+                <p class="lead mb-4 text-white" style="font-family: gothambook !important;">
+                    Kindly confirm your attendance on or before  <strong style="font-family: gothambold">28 August 2023</strong>
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center text-start">
                     <form method="POST" id="rsvpForm" action="/send-rsvp" class="p-4 p-md-12 border rounded-3 bg-light" _lpchecked="1" style="font-family: Josefin Sans;">
                         <div class="form-floating">
                             <input class="form-control" name="complete_name" list="datalistOptions" id="attendees-data-list" placeholder="Type to search..." required>
@@ -331,10 +250,6 @@
                                 <input class="hand-pointer form-check-input" type="radio" name="confirmed" id="inlineRadio2" value="no">
                                 <label class="hand-pointer form-check-label" for="inlineRadio2">Sorry I can't come 😥</label>
                             </div>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" style="height: 200px" name="suggestions" placeholder="Suggestions" id="floatingTextarea" required></textarea>
-                            <label for="floatingInput">Suggestions/Ideas on how we can do our dates:</label>
                         </div>
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
                     </form>
