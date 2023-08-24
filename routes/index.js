@@ -39,7 +39,7 @@ router.post('/send-rsvp', async (req, res) => {
         
         if (rsvp_count > 0) {
             try {
-                await Rsvp.update({ confirmed, suggestions }, {
+                await Rsvp.update({ confirmed }, {
                     where: { complete_name }
                 });
                 

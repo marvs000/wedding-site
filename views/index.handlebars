@@ -204,8 +204,8 @@
             <h1 class="display-5 fw-bold entourage-title">Location</h1>
             <div class="col-lg-8 mx-auto">
             <p class="lead mb-4" style="font-family: gothambook !important;">
-                The wedding ceremony and reception will take place at <b style="font-weight: 600;">Corazon Events Place</b>.
-                <b style="font-weight: 600; display: block;">
+                The event will take place at <b style="font-weight: 600; font-family: gothambook !important;">Corazon Events Place</b>.
+                <b style="font-weight: 600; display: block; font-family: gothambook !important;">
                     Please refer to the map below or click this 
                     <a href="https://goo.gl/maps/orL1pGff3stTap4M6" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">link</a> 
                     for more details on the directions.
@@ -266,7 +266,7 @@
     <!-- Start Footer Section -->
     <div class="footer" style="letter-spacing: 0.2em; font-weight: 300; font-size: 0.9em; background-color: rgba(40,47,61,1);">
         <footer class="py-2">
-            <p class="text-center text-muted" style="margin-top: 16px;">© 2021 • All Rights Reserved • Website developed by: Eric Marvin Baste</p>
+            <p class="text-center text-muted" style="margin-top: 16px; font-family: gothambook !important;">© 2023 • All Rights Reserved • Website developed by Eric Marvin Baste</p>
         </footer>
     </div>
     <!-- End Footer Section -->
@@ -291,8 +291,8 @@
             console.log(JSON.stringify(data))
             let swalTitle = (data.confirmed === "yes") ? 'Yey!' : 'Awwww!';
             let swalText = (data.confirmed === "yes")
-                ? "This is happiness for us, see you on our wedding day ?"
-                    : "This is so sad. But it's okay, you may also celebrate with us virtually if ever 😊";
+                ? "This is happiness for us, see you on September 2?"
+                    : "It's fine, will see you soon! 😊";
             let swalConfirm = (data.confirmed === "yes") ? 'Yes, see you!' : 'Sorry, will celebrate with you from afar!';
             let icon = (data.confirmed === "yes") ? 'happy-emoticon.gif' : 'sad-emoticon.gif';
 
@@ -317,7 +317,7 @@
                             }
                             const { value: formValues } = Swal.fire({
                                 title: `Yey! We have also reserved additional ${companion_count} seat(s) for you!`,
-                                text: `As much as we want to cater everyone on our wedding day, we regret that we are limitting the number of guests due to the current PANDEMIC, and most especially because of budget constraints`,
+                                text: ``,
                                 html: inputs_companion,
                                 showCancelButton: true,
                                 reverseButtons: true,
