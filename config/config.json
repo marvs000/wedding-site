@@ -13,7 +13,7 @@
   "test": {
     "username": "k3cmaazv9x8m9yia",
     "password": "rtrof8d8q2uegdq3",
-    "database": "heroku_309a1912abc29fb",
+    "database": "wle3r3abe37n5665",
     "host": "eanl4i1omny740jw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "dialectOptions": {
@@ -24,7 +24,7 @@
   "production": {
     "username": "k3cmaazv9x8m9yia",
     "password": "rtrof8d8q2uegdq3",
-    "database": "heroku_309a1912abc29fb",
+    "database": "wle3r3abe37n5665",
     "host": "eanl4i1omny740jw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "dialectOptions": {
