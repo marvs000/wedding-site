@@ -121,8 +121,9 @@ router.get('/responses', (req, res) => {
         attributes: ['complete_name', 'confirmed', 'rsvp_date']
     }).then(responses => {
         // Convert the responses array to a format suitable for rendering in HTML
-        const tableRows = responses.map(response => `
+        const tableRows = responses.map((response, index) => `
             <tr>
+                <td style="text-align: center;">${index + 1}</td>
                 <td>${response.complete_name}</td>
                 <td style="text-align: center;">${response.confirmed}</td>
                 <td style="text-align: center;">${new Date(response.rsvp_date).toLocaleString()}</td>
@@ -232,6 +233,7 @@ router.get('/responses', (req, res) => {
                 <table class="table">
                     <thead class="table-light">
                         <tr>
+                            <th>#</th>
                             <th>Name</th>
                             <th>RSVP</th>
                             <th>Date</th>
